@@ -28,6 +28,9 @@ function save()
 
         $dao->save($user);
 
+        // Aqui pode se aproveitar enviar um email para o suário confirmar
+        // seu email. Existe uma biblioteca para tal chamada PHPMailer.
+
         echo json_encode($user);
     } catch (Exception $e) {
         echo json_encode(null);

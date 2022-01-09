@@ -12,4 +12,13 @@ Como deve ter notado o diretório:
 
 `api` - Contem os arquivos que formam as rotas ou endpoints ou urls da aplicação. O accesso a estas rostas está protegido pela variável url **api_secret** e internamente definida como **API_SECRET**. Então sempre que executar uma chamada não esqueça de inclui-la na sua url.
 
+É importante lembrar que esta é uma API `RESTFULL / REST`. Significa que 
+precisa saber o básico sobre métodos http:
+<ul>
+    <li> GET - Usado para buscar dados. Ele não altera o estado do servidor.</li>
+    <li> POST - Usado para enviar dados. Ele altera o estado do servidor, pois insere novos registos.</li>
+    <li>DELETE - Usado para eliminar dados. Também altera o estado do serivor,pois elimina um certo registo.</li>
+    <li>PU - Usado para aualizar os registos exitentes no seridor.</li>
+</ul>
+
 `css, img e js` - São as mesmas já conhecidas para arquivos estáticos.

@@ -1,3 +1,8 @@
+/**
+ * É o arquivo js ligado a página new.php. É responsável por capurar os dados
+ * do usuário e envia-los para a api.
+ * 
+ */
 import { signup } from './user.js'
 
 document.forms.namedItem('form').onsubmit = async (e) => {
@@ -10,5 +15,11 @@ document.forms.namedItem('form').onsubmit = async (e) => {
     }
 
     const result = await signup(user)
-    console.log(result);
+
+    if (result) {
+        // Se tiver criado o usuário.
+        // Geralmente só não vai cria-lo caso o email já estiver cadastrado.
+    } else {
+        // Se não tiver criado o usuário
+    }
 }
