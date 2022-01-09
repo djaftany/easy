@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script type="module" src="/js/new.js"></script>
+    <script type="module" src="/js/login.js"></script>
     <title>Easy | Create Account</title>
 
     <style>
@@ -43,9 +43,8 @@
     <main>
         <form name="form">
             <input id="email" type="email" placeholder="Email">
-            <input id="name" type="text" placeholder="Name">
             <input id="password" type="password" placeholder="Password">
-            <button id="btn">Criar</button>
+            <button id="btn">Entrar</button>
         </form>
     </main>
 </body>

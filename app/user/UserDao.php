@@ -23,6 +23,14 @@ require_once "User.php";
  *  primary key(id)
  * )
  * 
+ * create table tokens (
+ *  id bigint unsigned not null auto_increment,
+ *  user_id bigint unsigned not null,
+ *  value varchar(255) not null unique,
+ *  primary key(id),
+ *  foreign key(user_id) references users(id)
+ * )
+ * 
  * Once the id is auto increment is not required to define its value 
  * on insert a row into the table.
  * 
@@ -85,6 +93,23 @@ class UserDao
     {
         $stmt = $this->connection->prepare("select * from users where email = ?");
         $stmt->bindValue(1, $email);
+        $stmt->execute();
+        $result = $stmt->fetch();
+
+        if (!$result) return null;
+
+        return new User($result["role"], $result["name"], $result["email"], $result["password"]);
+    }
+
+    /**
+     * Returns a user or null corresponding email passed as argument to the method.
+     */
+    public function getByToken($token)
+    {
+        $stmt = $this->connection->prepare(
+            "select u.role, u.name, u.email, u.password from users u join tokens t on t.user_id = u.id where t.value = ?"
+        );
+        $stmt->bindValue(1, $token);
         $stmt->execute();
         $result = $stmt->fetch();
 

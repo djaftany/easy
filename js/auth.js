@@ -1,7 +1,8 @@
-document.write("<script src='/js/env.js'></script>")
-const signin = async (credentials) => {
+import { API_SECRET, HOST, HEADERS } from './var.js'
+
+export const signin = async (credentials) => {
     const response = await fetch(
-        `${HOST}/api/users.php?api_secret=${API_SECRET}`,
+        `${HOST}/api/login.php?api_secret=${API_SECRET}`,
         {
             method: 'post',
             headers: HEADERS,
@@ -12,7 +13,7 @@ const signin = async (credentials) => {
     return await response.json()
 }
 
-const signout = async (credentials) => {
+export const signout = async (credentials) => {
     const response = await fetch(
         `${HOST}/api/users.php?api_secret=${API_SECRET}`,
         {
