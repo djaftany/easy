@@ -15,10 +15,17 @@ Como deve ter notado o diretório:
 É importante lembrar que esta é uma API `RESTFULL / REST`. Significa que 
 precisa saber o básico sobre métodos http:
 <ul>
-    <li> GET - Usado para buscar dados. Ele não altera o estado do servidor.</li>
-    <li> POST - Usado para enviar dados. Ele altera o estado do servidor, pois insere novos registos.</li>
-    <li>DELETE - Usado para eliminar dados. Também altera o estado do serivor,pois elimina um certo registo.</li>
-    <li>PU - Usado para aualizar os registos exitentes no seridor.</li>
+  <li>
+  PUT - Usado para aualizar os registos exitentes no seridor.</li>
+    <li> 
+    GET - Usado para buscar dados. Ele não altera o estado do servidor.
+    </li>
+    <li> 
+    POST - Usado para enviar dados. Ele altera o estado do servidor, pois insere novos registos.
+    </li>
+    <li>
+    DELETE - Usado para eliminar dados. Também altera o estado do serivor,pois elimina um certo registo.
+    </li>
 </ul>
 
 `css, img e js` - São as mesmas já conhecidas para arquivos estáticos.
