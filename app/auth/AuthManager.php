@@ -28,4 +28,18 @@ class AuthManager
 
         return $token;
     }
+
+    public function deleteTokens($user)
+    {
+
+        $stmt = $this->connection->prepare("select id from users where email = ?");
+        $stmt->bindValue(1, $user->getEmail());
+        $stmt->execute();
+
+        $id = $stmt->fetch()["id"];
+
+        $stmt = $this->connection->prepare("delete from tokens where user_id = ?");
+        $stmt->bindValue(1, $id);
+        $stmt->execute();
+    }
 }
