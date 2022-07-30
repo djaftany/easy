@@ -1,6 +1,6 @@
 # easy
 
-Este repositório gerado especialmente para **Hilton**, ilustra como usar recuros básicos para gerar funcionalidades avançadas na construção de websites modernos.
+Este repositório gerado ilustra como usar recuros básicos para gerar funcionalidades avançadas na construção de websites modernos.
 
 Usando PHP em combinação com JavaScript torna-se possível contruir uma API segura e consumi-la através de chamadas JavasCript.
 
